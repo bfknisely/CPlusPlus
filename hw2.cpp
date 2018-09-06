@@ -30,7 +30,7 @@ End of Problem 1*/
 
 #include <iostream>
 using namespace std;
-int main2() {
+int main() {
 	float product, y;
 	for (y=3.4; y <= 15.4; y++) {
 		product = 0.1;
