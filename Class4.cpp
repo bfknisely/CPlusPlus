@@ -44,7 +44,7 @@ int square( int y) {
 #include <iostream>
 using namespace std;
 float drakeEquation(float, float, float, float, float, float, float);  // prototype
-int main() {
+int main5() {
 	float R, fp, ne, fl, fi, fc, L, N;
 	
 	cout << "Enter variables for the Drake Equation: " << endl;
@@ -94,3 +94,39 @@ float drakeEquation(float R, float fp, float ne, float fl, float fi, float fc, f
 	return N;
 }
 
+
+// Functions may have default values assigned
+int boxVol(int length=3, int width=4, int height=5) {
+	return length*width*height;
+}
+
+int main7(){
+	cout << boxVol(3, 2) << endl;
+}
+
+
+// Call by reference vs Call by value
+// Call by value copies the value
+#include <iostream>
+using namespace std;
+int sqrByVal( int );
+void sqrByRef( int & );
+int main() {
+	int x=2, y=4;
+	cout << "X Bef: " << x << " "<<sqrByVal( x );
+	cout << "\nx after: " << x << endl;
+	cout << "y bef: " << y << " " << sqrByRef( y );
+	cout << "\ny after: " << y << endl;
+	return 0;
+}
+
+int sqrByVal(int iVal) {
+	return iVal *= iVal;
+}
+
+void sqrByRef(int & iVal2) {
+	iVal2 *= iVal2;
+}
+
+
+// Call by reference uses the exact memory location
