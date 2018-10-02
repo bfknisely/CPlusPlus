@@ -124,7 +124,7 @@ int sqrByVal(int iVal) {
 	return iVal *= iVal;
 }
 
-void sqrByRef(int & iVal2) {
+void sqrByRef(int &iVal2) {
 	iVal2 *= iVal2;
 }
 
